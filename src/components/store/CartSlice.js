@@ -9,6 +9,10 @@ const cartSlice = createSlice({
     name: 'cart',
     initialState: initialCartState,
     reducers: {
+        loadCart(state,action){
+            state.cartArray=action.payload.loaded;
+            state.totalItems=action.payload.total;
+        },
         addItem(state, action) {
             const index = state.cartArray.findIndex((item) => {
                 return item.title === action.payload.title

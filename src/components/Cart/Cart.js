@@ -8,16 +8,22 @@ const Cart = (props) => {
   const ItemsinCart = cartArray.map((item) => (
     <CartItem
       key={item.id}
-       id={item.id} title= {item.title} quantity= {item.quantity} total= {0} price= {item.price}
+      id={item.id}
+      title={item.title}
+      quantity={item.quantity}
+      total={0}
+      price={item.price}
     />
-  ))
+  ));
+
+
 
   return (
     <Card className={classes.cart}>
       <h2>Your Shopping Cart</h2>
 
-        {ItemsinCart}
-   
+      {ItemsinCart}
+
     </Card>
   );
 };
